@@ -35,10 +35,8 @@ angular.module('starter', ['ionic'])
   /* on each action (filling bill amount, choosing tip percentage we execute
   this function to immediately refresh the UI) */
   $scope.update = function() {
-    console.log('pctage selected : ' + $scope.myPercentage.value);
     $scope.tipAmount = $scope.billAmount * $scope.myPercentage.value;
     $scope.total = $scope.billAmount + $scope.tipAmount;
-    console.log('montant total : ' + $scope.total);
   }
 
 

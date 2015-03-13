@@ -20,17 +20,20 @@ angular.module('starter', ['ionic'])
 
 .controller('defaultCtrl', function($scope) {
 
-  $scope.billAmount = 0;
+  $scope.billAmount = 0; // initializes variables mostly to show zeros on UI
   $scope.tipAmount = 0;
   $scope.total = 0;
 
+  // available tip percentages; we are using id as name
   $scope.percentages = [
     { id:'10%', value:'0.10' },
     { id:'15%', value:'0.15' },
     { id:'20%', value:'0.20'}
     ];
-  $scope.myPercentage = $scope.percentages[0]; 
+  $scope.myPercentage = $scope.percentages[0]; // default tip percentage
 
+  /* on each action (filling bill amount, choosing tip percentage we execute
+  this function to immediately refresh the UI) */
   $scope.update = function() {
     console.log('pctage selected : ' + $scope.myPercentage.value);
     $scope.tipAmount = $scope.billAmount * $scope.myPercentage.value;

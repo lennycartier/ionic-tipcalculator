@@ -24,13 +24,12 @@ angular.module('starter', ['ionic'])
   $scope.tipAmount = 0;
   $scope.total = 0;
 
-  //$scope.percentages = {};
   $scope.percentages = [
     { id:'10%', value:'0.10' },
     { id:'15%', value:'0.15' },
     { id:'20%', value:'0.20'}
     ];
-  $scope.myPercentage = $scope.percentages[0]; // default
+  $scope.myPercentage = $scope.percentages[0]; 
 
   $scope.update = function() {
     console.log('pctage selected : ' + $scope.myPercentage.value);
@@ -38,8 +37,6 @@ angular.module('starter', ['ionic'])
     $scope.total = $scope.billAmount + $scope.tipAmount;
     console.log('montant total : ' + $scope.total);
   }
-
-  // $scope.tipAmount = $scope.myPercentage.value;
 
 
 

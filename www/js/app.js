@@ -20,8 +20,7 @@ angular.module('starter', ['ionic'])
 
 .controller('defaultCtrl', function($scope) {
 
-  $scope.billAmount = 0; // initializes variables mostly to show zeros on UI
-  $scope.tipAmount = 0;
+  $scope.tipAmount = 0; // initializes variables mostly to show zeros on UI
   $scope.total = 0;
 
   // available tip percentages; we are using id as name

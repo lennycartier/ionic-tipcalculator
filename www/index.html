@@ -35,6 +35,7 @@
               <input type="number" required placeholder="bill amount" ng-model="billAmount" ng-change="update(myPercentage)">
             </label>
           </div>
+		  <div class="item">
             <label class="item item-input item-select">
               <div class="input-label">
                 Tip percentage
@@ -42,13 +43,12 @@
               <select ng-model="myPercentage" ng-options="percentage.id for percentage in percentages" ng-change="update(myPercentage)">
               </select>
             </label>
-        </div>
-      <div class="list">
+		  </div>
         <div class="item">
-          Tip amount = {{tipAmount | number:2 | currency}}
+          Tip amount = {{tipAmount | currency}}
         </div>
         <div class="item">
-          Total bill = {{total | number:2 | currency}}
+          Total bill = {{total | currency}}
         </div>
 
       </div>

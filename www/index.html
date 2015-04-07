@@ -32,24 +32,24 @@
         <div class="list">
           <div class="item item-input-inset">
             <label class="item-input-wrapper">
-              <input type="number" required placeholder="bill amount" ng-model="billAmount" ng-change="update(myPercentage)">
+              <input type="number" required placeholder="bill amount" ng-model="billAmount" ng-change="update()">
             </label>
           </div>
-		  <div class="item">
+		      <div class="item">
             <label class="item item-input item-select">
               <div class="input-label">
                 Tip percentage
               </div>
-              <select ng-model="myPercentage" ng-options="percentage.id for percentage in percentages" ng-change="update(myPercentage)">
+              <select ng-model="myPercentage" ng-options="percentage.id for percentage in percentages" ng-change="update()">
               </select>
             </label>
-		  </div>
-        <div class="item">
-          Tip amount = {{tipAmount | currency:undefined}}
-        </div>
-        <div class="item">
-          Total bill = {{total | currency:undefined}}
-        </div>
+		      </div>
+          <div class="item">
+            Tip amount = {{tipAmount | currency:undefined}}
+          </div>
+          <div class="item">
+            Total bill = {{total | currency:undefined}}
+          </div>
       </div>
     </div>
      </ion-content>
